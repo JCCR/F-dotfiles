@@ -2,11 +2,9 @@
 [include]
     path = ~/.config/.gitconfig.sec
 
-[user]
-    name = Fabrice Laporte
-    email = fabrice@yescapa.com
 [core]
-    editor = nano
+    pager = diff-so-fancy | less --tabs=4 -RFX
+    editor = vim
     excludesfile = ~/.gitignore
 
 # From there, sections are in alphabetic order
@@ -14,10 +12,9 @@
 [alias]
     co = "!f() { git checkout \"$@\" && git stash list | grep \"$1:\"; }; f"
     last = log -1 HEAD
-    st = status
     uncommit = reset --soft HEAD~
     unstage = reset HEAD --
-    lg = log --graph --abbrev-commit --decorate --date=relative --all
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 [color]
     diff = auto
@@ -25,15 +22,24 @@
     branch = auto
     ui = true
 
+[color "diff-highlight"]
+        oldNormal = red bold
+        oldHighlight = red bold 52
+        newNormal = green bold
+        newHighlight = green bold 22
+[color "diff"]
+        meta = yellow
+        frag = magenta bold
+        commit = yellow bold
+        old = red bold
+        new = green bold
+        whitespace = red reverse
+
 [diff]
     tool = meld
 
 [difftool]
     prompt = false
-
-[gui]
-    # Remove `git gui` pop-up warning
-    gcwarning = false
 
 [help]
     autocorrect = 1
