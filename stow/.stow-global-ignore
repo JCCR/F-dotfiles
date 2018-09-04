@@ -4,4 +4,5 @@
 .stow-local-ignore
 .*.example
 ^/@.*
+^/_.*
 README.*
