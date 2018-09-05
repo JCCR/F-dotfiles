@@ -6,7 +6,7 @@ configuration {
 	width: 20;
 	lines: 20;
 /*	columns: 1;*/
-	font: "SF Pro Display Regular 14";
+	font: "SF Pro Display Regular 12";
 /*	bw: 1;*/
 /*	location: 0;*/
 /*	padding: 5;*/

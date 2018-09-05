@@ -190,7 +190,7 @@ bindsym $mod+r mode "resize"
 #}
 
 bar {
-    font pango:SF Pro Display Semibold 14
+    font pango:FontAwesome, SF Pro Display Semibold 12
     position top
 #    height 32
     status_command ~/.local/bin/i3status-rs ~/.config/i3status-rs/config.toml
@@ -205,7 +205,7 @@ bar {
     }
 }
 
-font pango:SF Pro Display Semibold 16
+font pango:SF Pro Display Semibold 12
 for_window [class=".*"] title_format " %title"
 client.focused #7070cc #6969bb #ffffff #768fff #484848
 

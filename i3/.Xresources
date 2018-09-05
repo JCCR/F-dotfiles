@@ -1,2 +1,7 @@
-Xft.dpi: 100
-Xcursor.size: 32
+Xft.dpi:96
+Xft.antialias:1
+Xft.hinting:1
+Xft.hintstyle:hintmedium
+Xft.rgba:none
+Xft.lcdfilter:lcddefault
+Xcursor.size:24

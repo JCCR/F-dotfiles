@@ -1,8 +1,12 @@
 i3
 #i3status-rs
+polybar
 feh
 dmenu
 rofi
 kitty
 brightnessctl
 playerctl
+scrot
+imagemagick
+xautolock

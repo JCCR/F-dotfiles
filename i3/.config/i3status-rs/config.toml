@@ -21,11 +21,10 @@ max_width = 120
 
 [[block]]
 block = "sound"
-interval = 1
 
 [[block]]
 block = "net"
-device = "enp5s0"
+device = "ens3"
 ssid = true
 bitrate = false
 ip = true

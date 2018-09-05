@@ -18,7 +18,7 @@
    blackselect:      #6969bb;
    darkgray:         #848484;
    scrollbarcolor:   #484848;
-   font: "SF Pro Display Regular 16";
+   font: "SF Pro Display Regular 12";
    background-color: @blackdarkest;
 }
 
@@ -145,7 +145,7 @@ entry {
    padding:6px 10px;
    background-color:@blackwidget;
    text-color:@fgwhite;
-   font: "SF Pro Display Regular 22";
+   font: "SF Pro Display Regular 16";
 }
 
 case-indicator {
