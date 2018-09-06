@@ -118,9 +118,9 @@ font-0 = ${xrdb:polybar.font0:SF Pro Display:size=11:weight=medium;0}
 font-1 = ${xrdb:polybar.font1:FontAwesome:size=11;1}
 font-2 = ${xrdb:polybar.font2:SF Mono: size=10;0}
 
-modules-left = i3 spotify1 volume
-modules-center = date
-modules-right = networkspeedup networkspeeddown wired-network load-average filesystem memory1 cpu1 
+modules-left = ${env:POLYBAR_MODULES_LEFT}
+modules-center = ${env:POLYBAR_MODULES_CENTER}
+modules-right = ${env:POLYBAR_MODULES_RIGHT} 
 
 separator = 
 

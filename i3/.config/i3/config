@@ -2,7 +2,8 @@
 
 ### Programs
 # exec mako
-exec_always --no-startup-id xautolock -detectsleep -time 15 -locker '~/.config/i3/lock.sh' &
+# exec_always --no-startup-id xautolock -detectsleep -time 15 -locker '~/.config/i3/lock.sh' &
+exec_always --no-startup-id light-locker --lock-on-suspend &
 
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
@@ -61,7 +62,7 @@ for_window [class=.*] border normal
     # exit i3 (logs you out of your X session)
     bindsym $mod+Shift+e exec ~/.config/i3/exit-menu.sh
     
-    bindsym $mod+Control+q exec ~/.config/i3/lock.sh
+    bindsym $mod+Control+q exec --no-startup-id light-locker-command -l
 #
 # Moving around:
 #

@@ -9,48 +9,24 @@
 # Terminate already running bar instances
 killall -q polybar
 
+mod_left=$POLYBAR_1_MODULES_LEFT
+mod_center=$POLYBAR_1_MODULES_CENTER
+mod_right=$POLYBAR_1_MODULES_RIGHT
+
 # Wait until the processes have been shut down
 while pgrep -u $UID -x polybar > /dev/null; do sleep 1; done
-
-desktop=$(echo $DESKTOP_SESSION)
-
-case $desktop in
-    i3)
-    if type "xrandr" > /dev/null; then
-      for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-        MONITOR=$m polybar --reload mainbar-i3 -c ~/.config/polybar/config &
-      done
-    else
-    polybar --reload mainbar-i3 -c ~/.config/polybar/config &
-    fi
-    ;;
-    openbox)
-    if type "xrandr" > /dev/null; then
-      for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-        MONITOR=$m polybar --reload mainbar-openbox -c ~/.config/polybar/config &
-      done
-    else
-    polybar --reload mainbar-openbox -c ~/.config/polybar/config &
-    fi
-#    if type "xrandr" > /dev/null; then
-#      for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-#        MONITOR=$m polybar --reload mainbar-openbox-extra -c ~/.config/polybar/config &
-#      done
-#    else
-#    polybar --reload mainbar-openbox-extra -c ~/.config/polybar/config &
-#    fi
-
-    ;;
-    bspwm)
-    if type "xrandr" > /dev/null; then
-      for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-        MONITOR=$m polybar --reload mainbar-bspwm -c ~/.config/polybar/config &
-      done
-    else
-    polybar --reload mainbar-bspwm -c ~/.config/polybar/config &
-    fi
-    ;;
-esac
+if type "xrandr" > /dev/null; then
+  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+  	echo $mod_left $mod_center $mod_right
+  	echo $m
+    POLYBAR_MODULES_LEFT=$mod_left POLYBAR_MODULES_CENTER=$mod_center POLYBAR_MODULES_RIGHT=$mod_right MONITOR=$m polybar --reload mainbar-i3 -c ~/.config/polybar/config &
+    mod_left=$POLYBAR_2_MODULES_LEFT
+    mod_center=$POLYBAR_2_MODULES_CENTER
+    mod_right=$POLYBAR_2_MODULES_RIGHT
+  done
+else
+POLYBAR_MODULES_LEFT=$mod_left POLYBAR_MODULES_CENTER=$mod_center POLYBAR_MODULES_RIGHT=$mod_right polybar --reload mainbar-i3 -c ~/.config/polybar/config &
+fi
 
 #for future scripts - how to find interface
 #interface-name=$(ip route | grep '^default' | awk '{print $5}')
