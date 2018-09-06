@@ -8,6 +8,6 @@ Xcursor.size:24
 
 i3wm.font0:SF Pro Display Semibold 12
 
-polybar.font0:SF Pro Display:size=11:weight=medium;0
+polybar.font0:SF Pro Display:size=11:weight=medium;1
 polybar.font1:FontAwesome:size=11;1
 polybar.font2:SF Mono: size=10;0

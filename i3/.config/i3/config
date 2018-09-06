@@ -1,12 +1,13 @@
 # i3 config file (v4)
 
 ### Programs
+exec --no-startup-id feh --bg-fill ~/.local/share/backgrounds/adwaita-night.jpg &
 # exec mako
 # exec_always --no-startup-id xautolock -detectsleep -time 15 -locker '~/.config/i3/lock.sh' &
 exec_always --no-startup-id light-locker --lock-on-suspend &
 
 # polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
+exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
 ### Variables
 #
@@ -29,7 +30,6 @@ set_from_resource $font i3wm.font0 'SF Pro Display Semibold 12'
 set $menu exec rofi -combi-modi drun#run -show combi -modi combi
 
 ### Output configuration
-exec --no-startup-id feh --bg-fill ~/.local/share/backgrounds/adwaita-night.jpg
 
 for_window [class=.*] border normal
 
@@ -179,9 +179,9 @@ for_window [class=.*] border normal
 # Control keys:
 #
     # Pulse Audio controls
-    bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+
+    bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 1%+
     #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-    bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%-
+    bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 1%-
     #bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
     bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1+ toggle
     #bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle # mute sound
@@ -205,6 +205,9 @@ for_window [class=.*] border normal
     for_window [class=".*"] title_format " %title"
     client.focused #8888dd #6969bb #ffffff #768fff #484848
     client.unfocused #484848 #383838 #ececec #768fff #222222
+    client.focused_inactive #686868 #484848 #ececec #768fff #484848
 
+### Workspace Assignments
+for_window [class="Spotify"] move to workspace 6
 
 #include /usr/local/etc/sway/config.d/*
