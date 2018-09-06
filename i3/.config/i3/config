@@ -1,6 +1,7 @@
 # i3 config file (v4)
 
 ### Programs
+exec --no-startup-id compton --config ~/.config/compton/config
 exec --no-startup-id feh --bg-fill ~/.local/share/backgrounds/adwaita-night.jpg &
 # exec mako
 # exec_always --no-startup-id xautolock -detectsleep -time 15 -locker '~/.config/i3/lock.sh' &
