@@ -1,2 +1,13 @@
-Xft.dpi: 100
-Xcursor.size: 32
+Xft.dpi:100
+Xft.antialias:1
+Xft.hinting:1
+Xft.hintstyle:hintmedium
+Xft.rgba:none
+Xft.lcdfilter:lcddefault
+Xcursor.size:32
+
+i3wm.font0:SF Pro Display Semibold 16
+
+polybar.font0:SF Pro Display:size=12:weight=medium;1
+polybar.font1:FontAwesome:size=12;1
+polybar.font2:SF Mono: size=11;0
