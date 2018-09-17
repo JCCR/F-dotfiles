@@ -15,3 +15,5 @@ papirus-icon-theme
 light-locker
 light-locker-settings
 compton
+xdotool
+unclutter-xfixes-git

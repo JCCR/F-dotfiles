@@ -10,6 +10,10 @@ exec_always --no-startup-id light-locker --lock-on-suspend &
 # polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
+#focus management, mouse
+exec_always --no-startup-id unclutter --timeout 5 --jitter 24 --ignore-scrolling &
+exec_always --no-startup-id zsh -c '~/.config/i3/focus-manager.sh' &
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -33,6 +37,8 @@ set $menu exec rofi -combi-modi drun#run -show combi -modi combi
 ### Output configuration
 
 for_window [class=.*] border normal
+for_window [class="^jetbrains-.+"][window_type=dialog] focus
+for_window [instance="sun-awt-X11-XWindowPeer"] border pixel 0
 
 ### Key bindings
 #
@@ -210,5 +216,6 @@ for_window [class=.*] border normal
 
 ### Workspace Assignments
 for_window [class="Spotify"] move to workspace 6
+for_window [class="Zeal"] floating enable
 
 #include /usr/local/etc/sway/config.d/*

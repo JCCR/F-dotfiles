@@ -1,0 +1,1 @@
+g++ -ansi -Wall -pedantic -O3 -o iskeydown iskeydown.cpp -L/usr/X11R6/lib -lX11
