@@ -17,7 +17,7 @@ configuration {
 /*	terminal: "rofi-sensible-terminal";*/
 /*	ssh-client: "ssh";*/
 /*	ssh-command: "{terminal} -e {ssh-client} {host}";*/
-	run-command: "i3-msg exec \"zsh -c {cmd}\"";
+	run-command: "i3-msg exec \"zsh -c '{cmd}'\"";
 /*	run-list-command: "";*/
 /*	run-shell-command: "{terminal} -e {cmd}";*/
 /*	window-command: "xkill -id {window}";*/
