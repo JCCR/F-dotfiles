@@ -18,3 +18,15 @@ compton
 xdotool
 unclutter-xfixes-git
 qt5ct
+
+i3-gnome-flashback
+gnome-shell
+gnome-control-center
+gnome-settings-daemon
+gtk3-nocsd-git
+gnome-tweaks
+sushi
+polkit
+gnome-keyring
+libsecret
+seahorse

@@ -13,7 +13,7 @@ if ! zgen saved; then
   zgen oh-my-zsh
 
   # plugins
-  zgen oh-my-zsh plugins/ssh-agent
+#  zgen oh-my-zsh plugins/ssh-agent
   zgen oh-my-zsh plugins/git
   zgen oh-my-zsh plugins/shrink-path
   zgen load zdharma/fast-syntax-highlighting  

@@ -1,8 +1,15 @@
 # i3 config file (v4)
 
 ### Programs
-exec --no-startup-id compton --config ~/.config/compton/config
-exec --no-startup-id feh --bg-fill ~/.local/share/backgrounds/adwaita-night.jpg &
+
+## GNOME session infrastructure
+exec --no-startup-id feh --bg-fill ~/.local/share/backgrounds/eye-nebula.jpg
+exec --no-startup-id gnome-flashback
+#exec_always --no-startup-id xrandr --output DisplayPort-2 --auto --primary --output DisplayPort-1 --auto --right-of DisplayPort-2 --rotate right
+# exec_always --no-startup-id gnome-power-manager
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+exec --no-startup-id compton --config ~/.config/compton/config &
 # exec mako
 # exec_always --no-startup-id xautolock -detectsleep -time 15 -locker '~/.config/i3/lock.sh' &
 exec_always --no-startup-id light-locker --lock-on-suspend &
