@@ -1,0 +1,80 @@
+[
+  { "keys": ["ctrl+q"], "command": "noop" },
+  { "keys": ["ctrl+u"], "command": "noop" },
+  { "keys": ["ctrl+shift+u"], "command": "noop" },
+  {
+    "keys": ["ctrl+y"],
+    "command": "run_macro_file",
+    "args": { "file": "res://Packages/Default/Delete Line.sublime-macro" }
+  },
+  { "keys": ["alt+1"], "command": "focus_group", "args": { "group": 0 } },
+  { "keys": ["alt+2"], "command": "focus_group", "args": { "group": 1 } },
+  { "keys": ["alt+3"], "command": "focus_group", "args": { "group": 2 } },
+  { "keys": ["alt+4"], "command": "focus_group", "args": { "group": 3 } },
+  { "keys": ["alt+5"], "command": "focus_group", "args": { "group": 4 } },
+  { "keys": ["alt+6"], "command": "focus_group", "args": { "group": 5 } },
+  { "keys": ["alt+7"], "command": "focus_group", "args": { "group": 6 } },
+  { "keys": ["alt+8"], "command": "focus_group", "args": { "group": 7 } },
+  { "keys": ["alt+9"], "command": "focus_group", "args": { "group": 8 } },
+  {
+    "keys": ["alt+shift+1"],
+    "command": "move_to_group",
+    "args": { "group": 0 }
+  },
+  {
+    "keys": ["alt+shift+2"],
+    "command": "move_to_group",
+    "args": { "group": 1 }
+  },
+  {
+    "keys": ["alt+shift+3"],
+    "command": "move_to_group",
+    "args": { "group": 2 }
+  },
+  {
+    "keys": ["alt+shift+4"],
+    "command": "move_to_group",
+    "args": { "group": 3 }
+  },
+  {
+    "keys": ["alt+shift+5"],
+    "command": "move_to_group",
+    "args": { "group": 4 }
+  },
+  {
+    "keys": ["alt+shift+6"],
+    "command": "move_to_group",
+    "args": { "group": 5 }
+  },
+  {
+    "keys": ["alt+shift+7"],
+    "command": "move_to_group",
+    "args": { "group": 6 }
+  },
+  {
+    "keys": ["alt+shift+8"],
+    "command": "move_to_group",
+    "args": { "group": 7 }
+  },
+  {
+    "keys": ["alt+shift+9"],
+    "command": "move_to_group",
+    "args": { "group": 8 }
+  },
+  { "keys": ["ctrl+0"], "command": "focus_side_bar" },
+  { "keys": ["ctrl+1"], "command": "select_by_index", "args": { "index": 0 } },
+  { "keys": ["ctrl+2"], "command": "select_by_index", "args": { "index": 1 } },
+  { "keys": ["ctrl+3"], "command": "select_by_index", "args": { "index": 2 } },
+  { "keys": ["ctrl+4"], "command": "select_by_index", "args": { "index": 3 } },
+  { "keys": ["ctrl+5"], "command": "select_by_index", "args": { "index": 4 } },
+  { "keys": ["ctrl+6"], "command": "select_by_index", "args": { "index": 5 } },
+  { "keys": ["ctrl+7"], "command": "select_by_index", "args": { "index": 6 } },
+  { "keys": ["ctrl+8"], "command": "select_by_index", "args": { "index": 7 } },
+  { "keys": ["ctrl+9"], "command": "select_by_index", "args": { "index": 8 } },
+  { "keys": ["ctrl+0"], "command": "select_by_index", "args": { "index": 9 } },
+  { "keys": ["alt+-"], "command": "jump_back" },
+  { "keys": ["alt+="], "command": "jump_forward" },
+  { "keys": ["alt+shift+-"], "command": "jump_back" },
+  { "keys": ["alt+keypad_minus"], "command": "jump_back" },
+  { "keys": ["alt+shift+keypad_minus"], "command": "jump_back" }
+]
