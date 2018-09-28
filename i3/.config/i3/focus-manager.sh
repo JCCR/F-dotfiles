@@ -8,17 +8,11 @@ xprop -root -spy _NET_ACTIVE_WINDOW | while read win; do
         Y=$((Y + (HEIGHT / 2)))
 
         xdotool mousemove ${X} ${Y}
-        
+        sleep 0.1
         jetbrainsPID=`xdotool search --onlyvisible --class 'jetbrains-' getwindowpid`
         windowPID=`xdotool getactivewindow getwindowpid`
         if [ "$jetbrainsPID" == "$windowPID" ]; then
-        	xdotool getactivewindow windowactivate
-        	xdotool getactivewindow windowfocus
-        	xdotool getactivewindow key Shift Shift Escape
+        	xdotool key Shift Shift Escape
         fi
-        unclutter --timeout 0 &
-        last_pid=$!
-        sleep 0.1
-        kill -KILL $last_pid
     fi
 done
