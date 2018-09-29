@@ -28,8 +28,10 @@ window {
    background-color: @blackdarkest;
    anchor: north;
    location: center;
-   y-offset: -20%;
-   width: 800px;
+   y-offset: -15%;
+   width: 600px;
+   border-color: #181818;
+   border:  0px 0px 0.5px 0px;
 }
 
 mainbox {
@@ -60,7 +62,7 @@ listview {
 
 element {
    background-color: @blackentry;
-   padding: 5px 25px;
+   padding: 2px 15px;
 }
 
 element selected {
@@ -68,7 +70,7 @@ element selected {
 }
 
 element normal.normal {
-   padding: 0px 25px;
+   padding: 0px 15px;
    text-color: @fgwhite;
 }
 
@@ -126,7 +128,7 @@ button selected {
 }
 
 inputbar {
-   padding: 20px 20px 20px 60px;
+   padding: 15px 12px 12px 48px;
    background-color: @blackwidget;
    spacing: 0px;
    children: [entry,case-indicator];
@@ -143,7 +145,7 @@ prompt {
 entry {
    padding:6px 10px;
    background-color:@blackwidget;
-   text-color: @fgwhite;
+   text-color:@fgwhite;
    font: "SF Pro Display Regular 16";
 }
 

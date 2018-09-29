@@ -1,7 +1,7 @@
 * {
-   font: "SF Pro Display Regular 16";
+   font: "SF Pro Display Regular 12";
 }
 
 entry {
-   font: "SF Pro Display Regular 24";
+   font: "SF Pro Display Regular 16";
 }
