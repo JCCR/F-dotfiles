@@ -2,7 +2,7 @@
 	"always_show_minimap_viewport": true,
 	"bold_folder_labels": true,
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
-	"dpi_scale": 1.46,
+	"dpi_scale": 1.0,
 	"enable_tab_scrolling": false,
 	"font_face": "SF Mono",
 	"font_options":
@@ -29,5 +29,5 @@
 	"save_on_focus_lost": true,
 	"show_tab_close_buttons": false,
 	"theme": "Material-Theme-Darker.sublime-theme",
-	"ui_scale": 1.0
+	"ui_scale": 1.1
 }
